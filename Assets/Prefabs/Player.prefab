@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4036109394874714342}
   - component: {fileID: 4036109394874714343}
   - component: {fileID: 4036109394874714340}
-  - component: {fileID: 7979511428457477810}
+  - component: {fileID: 6982179116191870899}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -99,7 +99,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7979511428457477810
+--- !u!114 &6982179116191870899
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,5 +111,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457b5ea3f395a1d44a7983bf9b17b2d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletPrefabs:
+  - {fileID: 0}
   speed: 3
   direction: {x: 0, y: 0, z: 0}
+  canShoot: 1
