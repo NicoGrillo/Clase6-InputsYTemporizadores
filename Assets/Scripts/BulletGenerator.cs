@@ -4,19 +4,26 @@ using UnityEngine;
 
 public class BulletGenerator : MonoBehaviour
 {
-    public GameObject[] bulletPrefabs;
-    public float delayStart = 1f;
-    public float delayShot = 1f;
+    public GameObject munition;
+    public float shootDelay = 1f;
 
-    void Start()
+    private void Update()
     {
-        InvokeRepeating("Shoot", delayStart, delayShot);
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            Scale();
+        }
+        Invoke("Shoot", shootDelay);
     }
 
     private void Shoot()
     {
-        int indexBullet = Random.Range(0, bulletPrefabs.Length);
-        Instantiate(bulletPrefabs[indexBullet], transform);
+        Instantiate(munition, transform.position, transform.rotation);
+    }
+
+    private void Scale()
+    {
+        munition.transform.localScale = munition.transform.localScale * 2;
     }
 
 }
